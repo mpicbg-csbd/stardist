@@ -26,6 +26,7 @@ from csbdeep.data import Resizer
 from ..sample_patches import get_valid_inds
 from ..nms import _ind_prob_thresh
 from ..utils import _is_power_of_2,  _is_floatarray, optimize_threshold
+from ..version import __version__
 
 # TODO: helper function to check if receptive field of cnn is sufficient for object sizes in GT
 
@@ -1059,7 +1060,6 @@ class StarDistBase(BaseModel):
         fname = (self.logdir / 'TF_SavedModel.zip') if fname is None else Path(fname)
         export_SavedModel(csbdeep_model, str(fname))
         return csbdeep_model
-
 
 
 class StarDistPadAndCropResizer(Resizer):

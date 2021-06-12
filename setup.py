@@ -62,13 +62,13 @@ clipper_src = sorted(glob(path.join(clipper_root, '*.cpp*')))[::-1]
 setup(
     name='stardist',
     version=__version__,
-    description='StarDist',
+    description='StarDist - Object Detection with Star-convex Shapes',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/stardist/stardist',
     author='Uwe Schmidt, Martin Weigert',
     author_email='research@uweschmidt.org, martin.weigert@epfl.ch',
-    license='BSD 3-Clause License',
+    license='BSD-3-Clause',
     packages=find_packages(),
     python_requires='>=3.6',
 
@@ -107,5 +107,7 @@ setup(
         'csbdeep>=0.6.0',
         'scikit-image',
         'numba',
+        'importlib-metadata',
+        'ruamel.yaml'
     ],
 )
